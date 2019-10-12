@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.junit.*;
 import java.util.Random;
 
+import static org.junit.Assert.*;
+
 public class SearchTest {
 
     private WebDriver driver;
@@ -35,30 +37,41 @@ public class SearchTest {
         // Wpisz informacje do wyszukania
         element.sendKeys(products[randomInteger]);
         element.submit();
-        String x ="";
+        String x = products[randomInteger];
+        int z;
         driver.findElements(By.id(x));
         boolean tak = true;
         boolean nie = false;
 
-            if (x == "mug")
-        {
+        switch (x) {
+            case "mug":
 
-            Assert.assertEquals(driver.findElement(By.id("19")).equals("Wyszukiwarka dziala dobrze"));
-        }
-        else  if(x == "notebook") {
-                Assert.assertEquals(driver.findElement(By.id("16")).equals("Wyszukiwarka dziala dobrze"));
-        }
-        else  if(x == "cushion") {
-            Assert.assertEquals(driver.findElement(By.id("10")).equals("Wyszukiwarka dziala dobrze"));
-        }
-        else if(x == "t-shirt") {
-                Assert.assertEquals(driver.findElement(By.id("1")).equals("Wyszukiwarka dziala dobrze"));
-        }
-        else {
-                Assert.assertEquals(driver.findElement(By.id("2")).equals("Wyszukiwarka dziala dobrze"));
+                assertEquals(driver.findElement(By.id("19")));
+                System.out.println("Wyszukiwarka dziala dobrze");
+                break;
+            case "notebook":
+                assertEquals(driver.findElement(By.id("16")));
+                System.out.println("Wyszukiwarka dziala dobrze");
+                break;
+            case "cushion":
+                assertEquals(driver.findElement(By.id("9")));
+                System.out.println("Wyszukiwarka dziala dobrze");
+                break;
+            case "t-shirt":
+                assertEquals(driver.findElement(By.id("1")));
+                System.out.println("Wyszukiwarka dziala dobrze");
+                break;
+            case "sweater":
+                assertEquals(driver.findElement(By.id("2")));
+                System.out.println("Wyszukiwarka dziala dobrze");
+                break;
         }
         element.submit();
     }
+
+    private void assertEquals(WebElement element) {
+    }
+
     @After
     public void tearDown() throws Exception {
         // Zamknij przeglądarkę
