@@ -12,7 +12,7 @@ public class SearchTest {
     private WebDriver driver;
     String[] products = {"mug", "notebook", "cushion", "t-shirt", "sweater"};
     Random random = new Random();
-    int randomInteger = random.nextInt(5);
+    int randomInteger = random.nextInt(4);
     @Before
     public void setUp() {
         // Uruchom nowy egzemplarz przeglądarki Chrome
@@ -34,27 +34,28 @@ public class SearchTest {
 
         // Wpisz informacje do wyszukania
         element.sendKeys(products[randomInteger]);
+        element.submit();
         String x ="";
         driver.findElements(By.id(x));
         boolean tak = true;
         boolean nie = false;
 
-            if (x = "mug");
+            if (x == "mug")
         {
 
-            assert (driver.findElement(By.id("19")).equals("Wyszukiwarka dziala dobrze"));
+            Assert.assertEquals(driver.findElement(By.id("19")).equals("Wyszukiwarka dziala dobrze"));
         }
-        else  if(x ="notebook"); {
-            assert (driver.findElement(By.id("16")).equals("Wyszukiwarka dziala dobrze"));
+        else  if(x == "notebook") {
+                Assert.assertEquals(driver.findElement(By.id("16")).equals("Wyszukiwarka dziala dobrze"));
         }
-        else  if(x ="cushion"); {
-            assert (driver.findElement(By.id("10")).equals("Wyszukiwarka dziala dobrze"));
+        else  if(x == "cushion") {
+            Assert.assertEquals(driver.findElement(By.id("10")).equals("Wyszukiwarka dziala dobrze"));
         }
-        else if(x ="t-shirt"); {
-            assert (driver.findElement(By.id("1")).equals("Wyszukiwarka dziala dobrze"));
+        else if(x == "t-shirt") {
+                Assert.assertEquals(driver.findElement(By.id("1")).equals("Wyszukiwarka dziala dobrze"));
         }
-        else (x ="sweater"); {
-            assert (driver.findElement(By.id("2")).equals("Wyszukiwarka dziala dobrze"));
+        else {
+                Assert.assertEquals(driver.findElement(By.id("2")).equals("Wyszukiwarka dziala dobrze"));
         }
         element.submit();
     }
