@@ -38,33 +38,39 @@ public class SearchTest {
         element.sendKeys(products[randomInteger]);
         element.submit();
         String x = products[randomInteger];
-        int z;
+        String z ="";
         driver.findElements(By.id(x));
         boolean tak = true;
         boolean nie = false;
 
         switch (x) {
             case "mug":
-
-                assertEquals(driver.findElement(By.id("19")));
+                z = "Customizable Mug";
+                assert(z.equals(driver.findElement(By.id("Customizable Mug"))));
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "notebook":
-                assertEquals(driver.findElement(By.id("16")));
+                z = "Mountain Fox Notebook";
+                assert(z.equals(driver.findElement(By.id("Mountain Fox Notebook"))));
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "cushion":
-                assertEquals(driver.findElement(By.id("9")));
+                z = "Mountain Fox Cushion";
+                assert(z.equals(driver.findElement(By.id("Mountain Fox Cushion"))));
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "t-shirt":
-                assertEquals(driver.findElement(By.id("1")));
+                z = "Hummingbird Printed T-Shirt";
+                assert(z.equals(driver.findElement(By.id("Hummingbird Printed T-Shirt"))));
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "sweater":
-                assertEquals(driver.findElement(By.id("2")));
+                z = "Hummingbird Printed Sweater";
+                assert(z.equals(driver.findElement(By.id("Hummingbird Printed Sweater"))));
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + x);
         }
         element.submit();
     }

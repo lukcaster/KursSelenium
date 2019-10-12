@@ -101,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570859469970</updated>
       <workItem from="1570859473723" duration="5692000" />
-      <workItem from="1570876709477" duration="3252000" />
+      <workItem from="1570876709477" duration="6694000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -124,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570897627297</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="prroba dwa, jeszcze asercje">
+      <created>1570899333102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570899333102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,17 +159,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/przyklad1/SearchTest.java</url>
-          <line>9</line>
+          <line>11</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/przyklad1/SearchTest.java</url>
-          <line>27</line>
+          <line>29</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/przyklad1/SearchTest.java</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
