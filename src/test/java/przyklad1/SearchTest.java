@@ -38,35 +38,49 @@ public class SearchTest {
         element.sendKeys(products[randomInteger]);
         element.submit();
         String x = products[randomInteger];
-        String z ="";
+        WebElement z;
+        WebElement c;
+        c = null;
         driver.findElements(By.id(x));
         boolean tak = true;
         boolean nie = false;
 
         switch (x) {
             case "mug":
-                z = "Customizable Mug";
-                assert(z.equals(driver.findElement(By.id("Customizable Mug"))));
-                System.out.println("Wyszukiwarka dziala dobrze");
-                break;
+                z = driver.findElement(By.className("h3 product-title"));
+                driver.findElement(By.name("Hummingbird Printed Sweater")) = c;
+                if (!(z != c)) {
+                    System.out.println("Wyszukiwarka nie dziala dobrze");
+                    break;
+                } else {
+                    throw new AssertionError();
+                }
             case "notebook":
-                z = "Mountain Fox Notebook";
-                assert(z.equals(driver.findElement(By.id("Mountain Fox Notebook"))));
+                z = 16;
+                if (!(z == driver.findElement(By.id("16")))) {
+                    throw new AssertionError();
+                }
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "cushion":
-                z = "Mountain Fox Cushion";
-                assert(z.equals(driver.findElement(By.id("Mountain Fox Cushion"))));
+                z = 9;
+                if (!(z == driver.findElement(By.id("9")))) {
+                    throw new AssertionError();
+                }
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "t-shirt":
-                z = "Hummingbird Printed T-Shirt";
-                assert(z.equals(driver.findElement(By.id("Hummingbird Printed T-Shirt"))));
+                z = 1;
+                if (!(z == driver.findElement(By.id("1")))) {
+                    throw new AssertionError();
+                }
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             case "sweater":
-                z = "Hummingbird Printed Sweater";
-                assert(z.equals(driver.findElement(By.id("Hummingbird Printed Sweater"))));
+                z = 2;
+                if (!(z == driver.findElement(By.id("2")))) {
+                    throw new AssertionError();
+                }
                 System.out.println("Wyszukiwarka dziala dobrze");
                 break;
             default:
