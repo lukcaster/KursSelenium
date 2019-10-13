@@ -42,8 +42,7 @@ public class SearchTest {
         WebElement c;
         c = null;
         driver.findElements(By.id(x));
-        boolean tak = true;
-        boolean nie = false;
+
 
         switch (x) {
             case "mug":
