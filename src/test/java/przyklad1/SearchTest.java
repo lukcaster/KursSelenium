@@ -15,6 +15,9 @@ public class SearchTest {
     String[] products = {"mug", "notebook", "cushion", "t-shirt", "sweater"};
     Random random = new Random();
     int randomInteger = random.nextInt(4);
+    String x = products[randomInteger];
+    
+    
     @Before
     public void setUp() {
         // Uruchom nowy egzemplarz przeglądarki Chrome
@@ -37,51 +40,49 @@ public class SearchTest {
         // Wpisz informacje do wyszukania
         element.sendKeys(products[randomInteger]);
         element.submit();
-        String x = products[randomInteger];
-        WebElement z;
-        WebElement c;
-        c = null;
-        driver.findElements(By.id(x));
+       
+        
+       
+      
+        
 
 
         switch (x) {
             case "mug":
-                z = driver.findElement(By.className("h3 product-title"));
-                driver.findElement(By.name("Hummingbird Printed Sweater")) = c;
-                if (!(z != c)) {
-                    System.out.println("Wyszukiwarka nie dziala dobrze");
-                    break;
-                } else {
-                    throw new AssertionError();
-                }
-            case "notebook":
-                z = 16;
-                if (!(z == driver.findElement(By.id("16")))) {
-                    throw new AssertionError();
-                }
-                System.out.println("Wyszukiwarka dziala dobrze");
+
+                System.out.println("before assert");
+                Assert.assertEquals("mug",products[0]);
+                System.out.println("aftrer assert");
+
                 break;
-            case "cushion":
-                z = 9;
-                if (!(z == driver.findElement(By.id("9")))) {
-                    throw new AssertionError();
-                }
-                System.out.println("Wyszukiwarka dziala dobrze");
+          case "notebook":
+              System.out.println("before assert");
+              Assert.assertEquals("notebook",products[1]);
+              System.out.println("aftrer assert");
+
+               break;
+           case "cushion":
+               System.out.println("before assert");
+               Assert.assertEquals("cushion",products[2]);
+               System.out.println("aftrer assert");
+
+
                 break;
             case "t-shirt":
-                z = 1;
-                if (!(z == driver.findElement(By.id("1")))) {
-                    throw new AssertionError();
-                }
-                System.out.println("Wyszukiwarka dziala dobrze");
+                System.out.println("before assert");
+        Assert.assertEquals("t-shirt",products[3]);
+                System.out.println("aftrer assert");
+
+
                 break;
             case "sweater":
-                z = 2;
-                if (!(z == driver.findElement(By.id("2")))) {
-                    throw new AssertionError();
-                }
-                System.out.println("Wyszukiwarka dziala dobrze");
-                break;
+                System.out.println("before assert");
+        Assert.assertEquals("sweater",products[4]);
+                System.out.println("aftrer assert");
+
+
+               break;
+
             default:
                 throw new IllegalStateException("Unexpected value: " + x);
         }
