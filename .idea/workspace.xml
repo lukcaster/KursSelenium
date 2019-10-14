@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cf761e4-f0ed-49fd-9fbe-234661447bb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/zadanie10/KatalonWithSeleniumTest.java" afterDir="false" />
+    <list default="true" id="6cf761e4-f0ed-49fd-9fbe-234661447bb2" name="Default Changelist" comment="Zadanie 10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zadanie10/KatalonWithSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zadanie10/KatalonWithSeleniumTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/przyklad1/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/przyklad1/SearchTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,7 +120,7 @@
       <workItem from="1570859473723" duration="5692000" />
       <workItem from="1570876709477" duration="12275000" />
       <workItem from="1571030590137" duration="523000" />
-      <workItem from="1571071078843" duration="5286000" />
+      <workItem from="1571071078843" duration="10121000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571031096412</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Zadanie 10">
+      <created>1571078205962</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571078205962</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +208,8 @@
     <MESSAGE value="prroba dwa, jeszcze asercje" />
     <MESSAGE value="pomooocy" />
     <MESSAGE value="nie dziala :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="nie dziala :(" />
+    <MESSAGE value="Zadanie 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

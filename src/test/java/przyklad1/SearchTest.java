@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.junit.*;
 import java.util.Random;
 
+import static java.lang.System.*;
 import static org.junit.Assert.*;
 
 public class SearchTest {
@@ -15,18 +16,20 @@ public class SearchTest {
     String[] products = {"mug", "notebook", "cushion", "t-shirt", "sweater"};
     Random random = new Random();
     int randomInteger = random.nextInt(4);
-    String x = products[randomInteger];
-    
+    String produktLos = products[randomInteger];
+    String produktId = "";
+    String produktIdWeb ="";
+
     
     @Before
     public void setUp() {
         // Uruchom nowy egzemplarz przeglądarki Chrome
-        System.setProperty("webdriver.chrome.driver",
+        setProperty("webdriver.chrome.driver",
                 "src/main/resources/drivers/chromedriver.exe");
         driver = new ChromeDriver();
 
         // Zmaksymalizuj okno przeglądarki
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         // Przejdź do Strony coderslab
         driver.get("https://prod-kurs.coderslab.pl");
     }
@@ -40,57 +43,49 @@ public class SearchTest {
         // Wpisz informacje do wyszukania
         element.sendKeys(products[randomInteger]);
         element.submit();
-       
-        
-       
-      
-        
 
 
-        switch (x) {
+        switch (produktLos) {
             case "mug":
+                produktId = "Customizable Mug";
+                produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                Assert.assertEquals(produktId, produktIdWeb);
+                System.out.println("System Dziala dobrze :)");
 
-                System.out.println("before assert");
-                Assert.assertEquals("mug",products[0]);
-                System.out.println("aftrer assert");
 
                 break;
-          case "notebook":
-              System.out.println("before assert");
-              Assert.assertEquals("notebook",products[1]);
-              System.out.println("aftrer assert");
+            case "notebook":
+                produktId = "Mountain Fox Notebook";
+                produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                Assert.assertEquals(produktId, produktIdWeb);
+                System.out.println("System Dziala dobrze :)");
 
-               break;
-           case "cushion":
-               System.out.println("before assert");
-               Assert.assertEquals("cushion",products[2]);
-               System.out.println("aftrer assert");
+                break;
+            case "cushion":
+                produktId = "Mountain Fox Cushion";
+                produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                Assert.assertEquals(produktId, produktIdWeb);
+                System.out.println("System Dziala dobrze :)");
 
 
                 break;
             case "t-shirt":
-                System.out.println("before assert");
-        Assert.assertEquals("t-shirt",products[3]);
-                System.out.println("aftrer assert");
-
+                produktId = "Hummingbird Printed T-shirt";
+                produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                Assert.assertEquals(produktId, produktIdWeb);
+                System.out.println("System Dziala dobrze :)");
 
                 break;
             case "sweater":
-                System.out.println("before assert");
-        Assert.assertEquals("sweater",products[4]);
-                System.out.println("aftrer assert");
+                produktId = "Hummingbird printed sweater";
+                produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/div[1]/h2")).getText();
+                Assert.assertEquals(produktId, produktIdWeb);
+                System.out.println("System Dziala dobrze :)");
 
-
-               break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + x);
+                break;
         }
-        element.submit();
     }
 
-    private void assertEquals(WebElement element) {
-    }
 
     @After
     public void tearDown() throws Exception {
