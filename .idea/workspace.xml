@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cf761e4-f0ed-49fd-9fbe-234661447bb2" name="Default Changelist" comment="Zadanie 10">
+    <list default="true" id="6cf761e4-f0ed-49fd-9fbe-234661447bb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/zadanieDodatkowe/Rejestracja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zadanie10/KatalonWithSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zadanie10/KatalonWithSeleniumTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KatalonWithSeleniumTest">
+  <component name="RunManager" selected="JUnit.Rejestracja">
     <configuration name="KatalonWithSeleniumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium" />
       <extension name="coverage">
@@ -62,6 +62,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zadanie10" />
       <option name="MAIN_CLASS_NAME" value="com.zadanie10.KatalonWithSeleniumTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Rejestracja" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zadanieDodatkowe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zadanieDodatkowe" />
+      <option name="MAIN_CLASS_NAME" value="com.zadanieDodatkowe.Rejestracja" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -100,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Rejestracja" />
         <item itemvalue="JUnit.KatalonWithSeleniumTest" />
         <item itemvalue="JUnit.SearchTest" />
         <item itemvalue="JUnit.SearchTest.testGoogleSearch" />
@@ -119,7 +135,8 @@
       <workItem from="1570859473723" duration="5692000" />
       <workItem from="1570876709477" duration="12275000" />
       <workItem from="1571030590137" duration="523000" />
-      <workItem from="1571071078843" duration="11485000" />
+      <workItem from="1571071078843" duration="11594000" />
+      <workItem from="1571167203471" duration="4338000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -191,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571084398783</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Zadanie 10 i szukanie skelp easyyy">
+      <created>1571085756547</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571085756547</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +240,8 @@
     <MESSAGE value="nie dziala :(" />
     <MESSAGE value="Zadanie 10" />
     <MESSAGE value="Search test dziala" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search test dziala" />
+    <MESSAGE value="Zadanie 10 i szukanie skelp easyyy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 10 i szukanie skelp easyyy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
