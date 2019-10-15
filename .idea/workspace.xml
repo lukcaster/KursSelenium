@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cf761e4-f0ed-49fd-9fbe-234661447bb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/zadanieDodatkowe/Rejestracja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zadanieDodatkowe/Rejestracja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zadanieDodatkowe/Rejestracja.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +136,7 @@
       <workItem from="1570876709477" duration="12275000" />
       <workItem from="1571030590137" duration="523000" />
       <workItem from="1571071078843" duration="11594000" />
-      <workItem from="1571167203471" duration="4338000" />
+      <workItem from="1571167203471" duration="6256000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571085756547</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Zadanie dodatkowe">
+      <created>1571171585182</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571171585182</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +248,8 @@
     <MESSAGE value="Zadanie 10" />
     <MESSAGE value="Search test dziala" />
     <MESSAGE value="Zadanie 10 i szukanie skelp easyyy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 10 i szukanie skelp easyyy" />
+    <MESSAGE value="Zadanie dodatkowe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie dodatkowe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
