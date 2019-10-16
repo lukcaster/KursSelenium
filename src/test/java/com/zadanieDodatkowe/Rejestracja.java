@@ -41,9 +41,9 @@ public class Rejestracja {
         //Przejscie do rejestracji
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/a")).click();
         //Plec
-        plecMezczyzna = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[1]/div[1]/label[1]/span/input")).getAttribute("value");
-        plecKobieta = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[1]/div[1]/label[2]/span/input")).getAttribute("value");
-        int randomPlec = random.nextInt(2);
+        String plecMezczyzna = "2";
+        String plecKobieta = "1";
+        int randomPlec = random.nextInt(1);
         String[] plecMiK = {plecKobieta, plecMezczyzna};
         String plecGenerator = plecMiK[randomPlec];
             if (plecGenerator == plecKobieta) {
@@ -142,7 +142,17 @@ public class Rejestracja {
         WebElement vatInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[5]/div[1]/input"));
         String[] vatTabela = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
         int vatRandom = random.nextInt(8);
-        String vat = vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom];
+        String[] phoneTabela = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        int phoneRandom = random.nextInt(8);
+        String[] addressNumberTabela = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        int addressNumberRandom = random.nextInt(8);
+        String[] zipTabela = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        int zipRandom = random.nextInt(8);
+        String vat1 = vatTabela[vatRandom];
+        String vat2 = phoneTabela[phoneRandom];
+        String vat3 = addressNumberTabela[addressNumberRandom];
+        String vat4 = zipTabela[zipRandom];
+        String vat = vat1 + vat3 + vat2 + vat1 + vat4 + vat2 +vat3 + vat4 + vat3;
         vatInput.sendKeys(vat);
         //Adres ulica
         WebElement addressInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[6]/div[1]/input"));
@@ -152,7 +162,7 @@ public class Rejestracja {
         addressInput.sendKeys(address);
         //Adres uzupelnienie
         WebElement addressNumberInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[7]/div[1]/input"));
-        String addressNumber = vatTabela[vatRandom] + vatTabela[vatRandom];
+        String addressNumber = vat1 + vat2 + " / " + vat4 + vat3;
         addressNumberInput.sendKeys(addressNumber);
         //City
         WebElement cityInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[8]/div[1]/input"));
@@ -162,13 +172,13 @@ public class Rejestracja {
         cityInput.sendKeys(city);
         //Zip
         WebElement zipInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[9]/div[1]/input"));
-        String zip = vatTabela[vatRandom] + vatTabela[vatRandom] + " - " + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom];
+        String zip = vat1 + vat3 + " - " + vat4 + vat2 + vat4;
         zipInput.sendKeys(zip);
         //Country
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[10]/div[1]/select/option[2]")).click();
         //Phone
         WebElement phoneInput = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/section/div[11]/div[1]/input"));
-        String phone = "+44" + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom] + vatTabela[vatRandom];
+        String phone = "+44" + vat;
         phoneInput.sendKeys(phone);
         //Save
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/form/footer/button")).click();

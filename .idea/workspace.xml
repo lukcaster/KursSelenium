@@ -136,7 +136,9 @@
       <workItem from="1570876709477" duration="12275000" />
       <workItem from="1571030590137" duration="523000" />
       <workItem from="1571071078843" duration="11594000" />
-      <workItem from="1571167203471" duration="6256000" />
+      <workItem from="1571167203471" duration="6571000" />
+      <workItem from="1571174160430" duration="5000" />
+      <workItem from="1571245755509" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571171585182</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Zadanie dodatkowe cale">
+      <created>1571174027356</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571174027356</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +258,8 @@
     <MESSAGE value="Search test dziala" />
     <MESSAGE value="Zadanie 10 i szukanie skelp easyyy" />
     <MESSAGE value="Zadanie dodatkowe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie dodatkowe" />
+    <MESSAGE value="Zadanie dodatkowe cale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie dodatkowe cale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
