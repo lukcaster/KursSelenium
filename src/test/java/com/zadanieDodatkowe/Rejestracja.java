@@ -29,6 +29,7 @@ public class Rejestracja {
     String cena2 = "";
 
 
+
     @Before
     public void setUp() {
         setProperty("webdriver.chrome.driver",
@@ -64,9 +65,10 @@ public class Rejestracja {
             WebElement lastNameWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[3]/div[1]/input"));
             lastNameWeb.sendKeys(lastName);
             //Email
-            String[] emailKobieta = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47"};
-            int randomEmailKobieta = random.nextInt(11);
-            email = firstName + lastName + emailKobieta[randomEmailKobieta] + "@gmail.com";
+            String[] emailKobieta = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47", "55", "124", "66"};
+            int randomEmailKobieta = random.nextInt(13);
+            int randomEmailKobieta2 = random.nextInt(13);
+            email = firstName + lastName + emailKobieta[randomEmailKobieta] + emailKobieta[randomEmailKobieta2] + "@gmail.com";
             WebElement emailWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[4]/div[1]/input"));
             emailWeb.sendKeys(email);
             //Haslo
@@ -101,9 +103,10 @@ public class Rejestracja {
             WebElement lastNameWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[3]/div[1]/input"));
             lastNameWeb.sendKeys(lastName);
             //Email
-            String[] emailMezczyzna = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47"};
-            int randomEmailMezczyzna = random.nextInt(11);
-            email = firstName + lastName + emailMezczyzna[randomEmailMezczyzna] + "@gmail.com";
+            String[] emailMezczyzna = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47", "55", "1235,"};
+            int randomEmailMezczyzna = random.nextInt(12);
+            int randomEmailMezczyzna2 = random.nextInt(12);
+            email = firstName + lastName + emailMezczyzna[randomEmailMezczyzna] + emailMezczyzna[randomEmailMezczyzna2] + "@gmail.com";
             WebElement emailWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[4]/div[1]/input"));
             emailWeb.sendKeys(email);
             //Haslo
@@ -224,16 +227,17 @@ public class Rejestracja {
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                           Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
 
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
                             }
 
-                        }else{
+                        } else {
                             Assert.fail();
                         }
                         break;
@@ -245,13 +249,15 @@ public class Rejestracja {
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
-                            } }else{
+                            }
+                        } else {
                             Assert.fail();
                         }
                         break;
@@ -261,13 +267,15 @@ public class Rejestracja {
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
-                            } }else{
+                            }
+                        } else {
                             Assert.fail();
                         }
                         break;
@@ -277,13 +285,15 @@ public class Rejestracja {
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
-                            } }else{
+                            }
+                        } else {
                             Assert.fail();
                         }
                         break;
@@ -293,13 +303,15 @@ public class Rejestracja {
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
-                            } }else{
+                            }
+                        } else {
                             Assert.fail();
                         }
                         break;
@@ -320,14 +332,15 @@ public class Rejestracja {
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
                         driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
                         WebElement notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
-                        if (notebookAssert.isEnabled()) {
+                        if (notebookAssert.isDisplayed()) {
                             notebookAssert.click();
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
-                            if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                            if (continueShopping.isEnabled()) {
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
                             }
@@ -343,10 +356,11 @@ public class Rejestracja {
                             notebookAssert.click();
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
                             }
@@ -363,10 +377,11 @@ public class Rejestracja {
                             notebookAssert.click();
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                            Thread.sleep(1000);
+                            Thread.sleep(3000);
+                            WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                             if (continueShopping.isDisplayed()) {
-                                continueShopping.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             } else {
                                 Assert.fail();
                             }
@@ -374,7 +389,7 @@ public class Rejestracja {
                             Assert.fail();
                         }
                 }
-                        break;
+                break;
 
             case "cushion":
                 produktId = "Mountain Fox Cushion";
@@ -390,13 +405,15 @@ public class Rejestracja {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
+                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                     if (continueShopping.isDisplayed()) {
-                        continueShopping.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     } else {
                         Assert.fail();
-                    } }else{
+                    }
+                } else {
                     Assert.fail();
                 }
                 break;
@@ -408,13 +425,15 @@ public class Rejestracja {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
+                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                     if (continueShopping.isDisplayed()) {
-                        continueShopping.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     } else {
                         Assert.fail();
-                    } }else{
+                    }
+                } else {
                     Assert.fail();
                 }
                 break;
@@ -427,18 +446,20 @@ public class Rejestracja {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
-                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
+                    driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+                    Thread.sleep(3000);
                     WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                    Thread.sleep(1000);
+
                     if (continueShopping.isDisplayed()) {
 
-                        continueShopping.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                     } else {
                         Assert.fail();
-                } }else{
-                        Assert.fail();
                     }
-                    break;
+                } else {
+                    Assert.fail();
+                }
+                break;
 
 
             case "t-shirt":
@@ -446,16 +467,25 @@ public class Rejestracja {
                 produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
                 Assert.assertEquals(produktId, produktIdWeb);
                 driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
-                driver.findElement(By.xpath("//*[@id=\"group_2\"]/li[1]/label/span/span")).click();
+                driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
+
                 cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
-                driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")).click();
-                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                Thread.sleep(1000);
-                if (continueShopping.isDisplayed()) {
-                    continueShopping.click();
-                } else {
-                    Assert.fail();
-                }
+                WebElement tshirtAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    Assert.assertTrue(tshirtAssert.isEnabled());
+
+                    Thread.sleep(3000);
+                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+
+                    if (continueShopping.isDisplayed()) {
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                    } else {
+                        Assert.fail();
+                    }
+
+
+
+
 
                 break;
             case "sweater":
@@ -463,25 +493,341 @@ public class Rejestracja {
                 produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/div[1]/h2")).getText();
                 Assert.assertEquals(produktId, produktIdWeb);
                 driver.findElement(By.xpath("///*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
-                driver.findElement(By.xpath("//*[@id=\"group_2\"]/li[1]/label/span/span")).click();
+                driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
                 cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
-                driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")).click();
-                continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
-                Thread.sleep(1000);
+                WebElement sweaterAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                Assert.assertTrue(sweaterAssert.isEnabled());
+                Thread.sleep(3000);
+                continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
                 if (continueShopping.isDisplayed()) {
-                    continueShopping.click();
+                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                 } else {
                     Assert.fail();
                 }
                 break;
         }
-    }
+
+
+
+            // Znajdź element wprowadzania tekstu na podstawie jego nazwy
+
+            element = driver.findElement(By.name("s"));
+            // Wyczyść teskst zapisany w elemencie
+            element.clear();
+
+            // Wpisz informacje do wyszukania
+            element.sendKeys(products[randomProducts]);
+            element.submit();
+
+
+            switch (produktLos) {
+                case "mug":
+                    produktId = "Customizable Mug";
+                    produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                    Assert.assertEquals(produktId, produktIdWeb);
+                    String[] mugTabela = new String[]{"1", "2", "3", "4", "5"};
+                    int mugRandom = random.nextInt(4);
+                    String mug = mugTabela[mugRandom];
+                    switch (mug) {
+                        case "1":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
+                            WebElement mugCustomization = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[2]/section/div/form/ul/li/textarea"));
+                            mugCustomization.sendKeys(firstName + alias);
+                            driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[2]/section/div/form/div/button")).click();
+                            WebElement mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (mugAssert.isEnabled()) {
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                mugAssert.click();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+
+
+                        case "2":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
+                            mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (mugAssert.isEnabled()) {
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                mugAssert.click();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+                        case "3":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
+                            mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (mugAssert.isEnabled()) {
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                mugAssert.click();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+                        case "4":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[4]/div/a/img")).click();
+                            mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (mugAssert.isEnabled()) {
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                mugAssert.click();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+                        case "5":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[5]/div/a/img")).click();
+                            mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (mugAssert.isEnabled()) {
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                mugAssert.click();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+                    }
+                    break;
+
+
+                case "notebook":
+                    produktId = "Mountain Fox Notebook";
+                    produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                    Assert.assertEquals(produktId, produktIdWeb);
+                    String[] notebookTabela = new String[]{"1", "2", "3",};
+                    int notebookRandom = random.nextInt(2);
+                    String notebook = notebookTabela[notebookRandom];
+
+                    switch (notebook) {
+                        case "1":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
+                            driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                            WebElement notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (notebookAssert.isEnabled()) {
+                                notebookAssert.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+                        case "2":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
+                            driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[2]")).click();
+                            notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (notebookAssert.isEnabled()) {
+                                notebookAssert.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                                cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                            break;
+
+                        case "3":
+                            driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
+                            driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[4]")).click();
+                            notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            if (notebookAssert.isEnabled()) {
+                                notebookAssert.click();
+                                driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                                cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                                Thread.sleep(3000);
+                                WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                                if (continueShopping.isDisplayed()) {
+                                    driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                                } else {
+                                    Assert.fail();
+                                }
+                            } else {
+                                Assert.fail();
+                            }
+                    }
+                    break;
+
+                case "cushion":
+                    produktId = "Mountain Fox Cushion";
+                    produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                    Assert.assertEquals(produktId, produktIdWeb);
+                    String[] cushionTabela = new String[]{"1", "2", "3",};
+                    int cushionRandom = random.nextInt(2);
+                    String cushion = cushionTabela[cushionRandom];
+                case "1":
+                    driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
+                    WebElement cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    if (cushionAssert.isEnabled()) {
+                        cushionAssert.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                        cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                        Thread.sleep(3000);
+                        WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]/i"));
+
+                        if (continueShopping.isDisplayed()) {
+                            driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                        } else {
+                            Assert.fail();
+                        }
+                    } else {
+                        Assert.fail();
+                    }
+                    break;
+                case "2":
+                    driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
+                    driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                    cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    if (cushionAssert.isEnabled()) {
+                        cushionAssert.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                        cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                        Thread.sleep(3000);
+                        WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                        if (continueShopping.isDisplayed()) {
+                            driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                        } else {
+                            Assert.fail();
+                        }
+                    } else {
+                        Assert.fail();
+                    }
+                    break;
+
+                case "3":
+                    driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
+                    driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                    cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    if (cushionAssert.isEnabled()) {
+                        cushionAssert.click();
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
+                        cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
+                        driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+                        Thread.sleep(3000);
+                        WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button"));
+
+                        if (continueShopping.isDisplayed()) {
+
+                            driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                        } else {
+                            Assert.fail();
+                        }
+                    } else {
+                        Assert.fail();
+                    }
+                    break;
+
+
+                case "t-shirt":
+                    produktId = "Hummingbird Printed T-shirt";
+                    produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/div[1]/h2")).getText();
+                    Assert.assertEquals(produktId, produktIdWeb);
+                    driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
+                    driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
+                    cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                    WebElement tshirtAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    Assert.assertTrue(tshirtAssert.isEnabled());
+                    Thread.sleep(3000);
+                    WebElement continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                    if (continueShopping.isDisplayed()) {
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                    } else {
+                        Assert.fail();
+                    }
+
+                    break;
+                case "sweater":
+                    produktId = "Hummingbird printed sweater";
+                    produktIdWeb = driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/div[1]/h2")).getText();
+                    Assert.assertEquals(produktId, produktIdWeb);
+                    driver.findElement(By.xpath("///*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
+                    driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
+                    cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                    WebElement sweaterAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    Assert.assertTrue(sweaterAssert.isEnabled());
+                    Thread.sleep(3000);
+                    continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
+
+                    if (continueShopping.isDisplayed()) {
+                        driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")).click();
+                    } else {
+                        Assert.fail();
+                    }
+                    break;
+            }
+                String sumaCen = "";
+                sumaCen = driver.findElement(By.xpath("//*[@id=\"cart-subtotal-products\"]/span[2]")).getText();
+                System.out.println(cena1 + " + " + cena2 + " = " + sumaCen);
+            }
+
+
+
 
     @After
     public void tearDown() {
 
     }
 }
+
+
+
 
 
 
