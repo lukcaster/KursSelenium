@@ -142,7 +142,8 @@
       <workItem from="1571167203471" duration="6571000" />
       <workItem from="1571174160430" duration="5000" />
       <workItem from="1571245755509" duration="5784000" />
-      <workItem from="1571333523644" duration="5728000" />
+      <workItem from="1571333523644" duration="5802000" />
+      <workItem from="1571339738190" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="prroba dwa, jeszcze asercje">
       <created>1570877133262</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571251530537</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Zadanie dodatkowe proba 123124">
+      <created>1571339543011</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571339543011</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +285,8 @@
     <MESSAGE value="Zadanie 10 i szukanie skelp easyyy" />
     <MESSAGE value="Zadanie dodatkowe" />
     <MESSAGE value="Zadanie dodatkowe cale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie dodatkowe cale" />
+    <MESSAGE value="Zadanie dodatkowe proba 123124" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie dodatkowe proba 123124" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.System.setProperty;
 
@@ -65,10 +66,13 @@ public class Rejestracja {
             WebElement lastNameWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[3]/div[1]/input"));
             lastNameWeb.sendKeys(lastName);
             //Email
-            String[] emailKobieta = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47", "55", "124", "66"};
-            int randomEmailKobieta = random.nextInt(13);
-            int randomEmailKobieta2 = random.nextInt(13);
-            email = firstName + lastName + emailKobieta[randomEmailKobieta] + emailKobieta[randomEmailKobieta2] + "@gmail.com";
+            String[] emailKobietaNumer1 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailKobieta = random.nextInt(10);
+            String[] emailKobietaNumer2 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailKobieta2 = random.nextInt(10);
+            String[] emailKobietaNumer3 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailKobieta3 = random.nextInt(10);
+            email = firstName + lastName + emailKobietaNumer1[randomEmailKobieta] + emailKobietaNumer2[randomEmailKobieta2] +  emailKobietaNumer3[randomEmailKobieta3] + "@gmail.com";
             WebElement emailWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[4]/div[1]/input"));
             emailWeb.sendKeys(email);
             //Haslo
@@ -103,10 +107,14 @@ public class Rejestracja {
             WebElement lastNameWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[3]/div[1]/input"));
             lastNameWeb.sendKeys(lastName);
             //Email
-            String[] emailMezczyzna = {"1", "2", "3", "12", "44", "33", "123", "56", "66", "69", "09", "47", "55", "1235,"};
-            int randomEmailMezczyzna = random.nextInt(12);
-            int randomEmailMezczyzna2 = random.nextInt(12);
-            email = firstName + lastName + emailMezczyzna[randomEmailMezczyzna] + emailMezczyzna[randomEmailMezczyzna2] + "@gmail.com";
+            String[] emailMezczyznaNumer1 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailMezczyzna = random.nextInt(10);
+            String[] emailMezczyznaNumer2 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailMezczyzna2 = random.nextInt(10);
+            String[] emailMezczyznaNumer3 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+            int randomEmailMezczyzna3 = random.nextInt(10);
+            email = firstName + lastName + emailMezczyznaNumer1[randomEmailMezczyzna] + emailMezczyznaNumer2[randomEmailMezczyzna2] +  emailMezczyznaNumer3[randomEmailMezczyzna3] + "@gmail.com";
+
             WebElement emailWeb = driver.findElement(By.xpath("//*[@id=\"customer-form\"]/section/div[4]/div[1]/input"));
             emailWeb.sendKeys(email);
             //Haslo
@@ -223,7 +231,9 @@ public class Rejestracja {
                         WebElement mugCustomization = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[2]/section/div/form/ul/li/textarea"));
                         mugCustomization.sendKeys(firstName + alias);
                         driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[2]/section/div/form/div/button")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         WebElement mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
@@ -245,7 +255,9 @@ public class Rejestracja {
 
                     case "2":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
@@ -263,7 +275,9 @@ public class Rejestracja {
                         break;
                     case "3":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
@@ -281,7 +295,9 @@ public class Rejestracja {
                         break;
                     case "4":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[4]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
@@ -299,7 +315,9 @@ public class Rejestracja {
                         break;
                     case "5":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[5]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (mugAssert.isEnabled()) {
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             mugAssert.click();
@@ -330,10 +348,14 @@ public class Rejestracja {
                 switch (notebook) {
                     case "1":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+
                         WebElement notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (notebookAssert.isDisplayed()) {
                             notebookAssert.click();
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                             cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                             Thread.sleep(3000);
@@ -350,8 +372,10 @@ public class Rejestracja {
                         break;
                     case "2":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[2]")).click();
                         notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (notebookAssert.isEnabled()) {
                             notebookAssert.click();
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -371,8 +395,11 @@ public class Rejestracja {
 
                     case "3":
                         driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[4]")).click();
+
                         notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                         if (notebookAssert.isEnabled()) {
                             notebookAssert.click();
                             driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -400,7 +427,9 @@ public class Rejestracja {
                 String cushion = cushionTabela[cushionRandom];
             case "1":
                 driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 WebElement cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 if (cushionAssert.isEnabled()) {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -420,7 +449,9 @@ public class Rejestracja {
             case "2":
                 driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
                 driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 if (cushionAssert.isEnabled()) {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -441,7 +472,9 @@ public class Rejestracja {
             case "3":
                 driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
                 driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 if (cushionAssert.isEnabled()) {
                     cushionAssert.click();
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -468,8 +501,9 @@ public class Rejestracja {
                 Assert.assertEquals(produktId, produktIdWeb);
                 driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
                 driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
-
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 WebElement tshirtAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
                     Assert.assertTrue(tshirtAssert.isEnabled());
 
@@ -495,11 +529,12 @@ public class Rejestracja {
                 driver.findElement(By.xpath("///*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
                 driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
                 cena1 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 WebElement sweaterAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
                 Assert.assertTrue(sweaterAssert.isEnabled());
                 Thread.sleep(3000);
                 continueShopping = driver.findElement(By.xpath("//*[@id=\"myModalLabel\"]"));
-
+                driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 if (continueShopping.isDisplayed()) {
                     driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
                 } else {
@@ -536,6 +571,7 @@ public class Rejestracja {
                             mugCustomization.sendKeys(firstName + alias);
                             driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[2]/section/div/form/div/button")).click();
                             WebElement mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (mugAssert.isEnabled()) {
                                 cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                                 mugAssert.click();
@@ -558,6 +594,7 @@ public class Rejestracja {
                         case "2":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
                             mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (mugAssert.isEnabled()) {
                                 cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                                 mugAssert.click();
@@ -576,6 +613,7 @@ public class Rejestracja {
                         case "3":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
                             mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (mugAssert.isEnabled()) {
                                 cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                                 mugAssert.click();
@@ -594,6 +632,7 @@ public class Rejestracja {
                         case "4":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[4]/div/a/img")).click();
                             mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (mugAssert.isEnabled()) {
                                 cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                                 mugAssert.click();
@@ -612,6 +651,7 @@ public class Rejestracja {
                         case "5":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[5]/div/a/img")).click();
                             mugAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (mugAssert.isEnabled()) {
                                 cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[1]/div/span")).getText();
                                 mugAssert.click();
@@ -643,6 +683,7 @@ public class Rejestracja {
                         case "1":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
                             driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             WebElement notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
                             if (notebookAssert.isEnabled()) {
                                 notebookAssert.click();
@@ -663,7 +704,9 @@ public class Rejestracja {
                         case "2":
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
                             driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[2]")).click();
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (notebookAssert.isEnabled()) {
                                 notebookAssert.click();
                                 driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -685,6 +728,7 @@ public class Rejestracja {
                             driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
                             driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[4]")).click();
                             notebookAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                             if (notebookAssert.isEnabled()) {
                                 notebookAssert.click();
                                 driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -713,6 +757,7 @@ public class Rejestracja {
                 case "1":
                     driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[1]/div/a/img")).click();
                     WebElement cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                     if (cushionAssert.isEnabled()) {
                         cushionAssert.click();
                         driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -733,6 +778,7 @@ public class Rejestracja {
                     driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[2]/div/a/img")).click();
                     driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
                     cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                     if (cushionAssert.isEnabled()) {
                         cushionAssert.click();
                         driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -754,6 +800,7 @@ public class Rejestracja {
                     driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article[3]/div/a/img")).click();
                     driver.findElement(By.xpath("//*[@id=\"group_4\"]/option[3]")).click();
                     cushionAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
+                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                     if (cushionAssert.isEnabled()) {
                         cushionAssert.click();
                         driver.findElement(By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/button")).click();
@@ -781,6 +828,7 @@ public class Rejestracja {
                     driver.findElement(By.xpath("//*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
                     driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
                     cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                     WebElement tshirtAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
                     Assert.assertTrue(tshirtAssert.isEnabled());
                     Thread.sleep(3000);
@@ -800,6 +848,7 @@ public class Rejestracja {
                     driver.findElement(By.xpath("///*[@id=\"js-product-list\"]/div[1]/article/div/a/img")).click();
                     driver.findElement(By.xpath("//*[@id=\"group_1\"]/option[2]")).click();
                     cena2 = driver.findElement(By.xpath("//*[@id=\"main\"]/div[1]/div[2]/div[1]/div[2]/div/span[1]")).getText();
+                    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                     WebElement sweaterAssert = driver.findElement(By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button"));
                     Assert.assertTrue(sweaterAssert.isEnabled());
                     Thread.sleep(3000);
